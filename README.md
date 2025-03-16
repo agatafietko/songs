@@ -2,11 +2,33 @@
 
 This project analyzes the "Songs Dataset 2000-2020" from Kaggle to visualize and understand music trends over the past two decades.
 
+## Project Overview
+
+This analysis explores patterns and trends in popular music from 2000 to 2020, examining factors that contribute to a song's popularity and how music characteristics have evolved over time. The Jupyter notebook includes detailed code, explanations, and visualizations that provide insights into the evolution of popular music.
+
 ## Analyses Performed
 
 1. **Top 20 Songs by Popularity**: Visualization of the most popular songs based on popularity scores.
-2. **Relationship Between Song Duration and Popularity**: Analysis of how the length of a song affects its popularity.
-3. **Genre Popularity Analysis**: Exploration of which music genres are most popular and their distribution.
+2. **Song Duration vs. Popularity**: Analysis of how the length of a song affects its popularity.
+3. **Popularity Distribution by Genre**: Comparison of the popularity of different music genres.
+4. **Genre Distribution**: Exploration of the distribution of music genres in the dataset.
+5. **Trend of Song Characteristics Over Time**: Examination of how song attributes have evolved over the years.
+6. **Danceability vs. Energy**: Analysis of the relationship between a song's danceability and energy levels.
+
+## Key Visualizations
+
+All visualizations are pre-generated and can be viewed directly in the notebook:
+
+- `top20_popular_songs.png`: Bar chart of the most popular songs
+- `duration_vs_popularity.png`: Scatter plot showing relationship between song duration and popularity
+- `genre_popularity.png`: Bar chart of genres ranked by average popularity
+- `genre_distribution.png`: Pie chart showing the distribution of music genres
+- `song_trends_over_time.png`: Line chart showing how song characteristics have changed over time
+- `danceability_vs_energy.png`: Scatter plot analyzing the relationship between danceability and energy
+
+## Data Source
+
+The data used in this analysis is from the Kaggle dataset ["Songs Dataset 2000-2020"](https://www.kaggle.com/datasets/waqi786/songs-dataset-2000-2020-50k-records).
 
 ## Requirements
 
@@ -24,52 +46,22 @@ You can install all requirements using:
 pip install -r requirements.txt
 ```
 
-## Dataset
-
-The dataset is downloaded automatically from Kaggle using the kagglehub library:
-```python
-kagglehub.dataset_download("waqi786/songs-dataset-2000-2020-50k-records")
-```
-
 ## Usage
 
-Simply run the Python script:
-```
-python songs_analysis.py
-```
+You can either:
 
-The script will:
-1. Download the dataset from Kaggle
-2. Process the data
-3. Generate visualizations in the `songs_figures` directory
+1. View the pre-generated analysis in the Jupyter notebook: `songs_analysis.ipynb`
+2. Run the notebook yourself to regenerate the analysis
 
-## Outputs
+## Key Findings
 
-All visualizations are saved in the `songs_figures` directory:
-- `top20_popular_songs.png`: Bar chart of the most popular songs
-- `duration_vs_popularity.png`: Scatter plot with regression line showing relationship between song duration and popularity
-- `duration_popularity_boxplot.png`: Box plot showing distribution of popularity scores across different song durations
-- `genre_popularity.png`: Bar chart of genres ranked by average popularity
-- `genre_distribution.png`: Pie chart showing the distribution of top music genres
+- Pop songs by artists like Ed Sheeran and The Weeknd dominate in terms of popularity
+- There is a slight negative correlation between song duration and popularity, suggesting shorter songs may perform better
+- Pop music is the most dominant genre both in quantity and average popularity
+- Over time, song durations have generally decreased, reflecting changing listening habits in the streaming era
+- Most successful songs achieve a balance between danceability and energy attributes
+- Streaming numbers generally correlate with popularity scores, highlighting the importance of streaming platforms
 
-If a specific column isn't found in the dataset, the script will try to use alternatives or proxies based on the available data.
+## Author
 
-## Analyses Details
-
-### Top 20 Songs by Popularity
-This analysis identifies and visualizes the most popular songs in the dataset based on popularity score.
-
-### Duration vs. Popularity
-This analysis explores whether the length of a song has any correlation with its popularity, including:
-- Scatter plot with regression line
-- Statistical correlation analysis
-- Boxplots showing popularity distribution across different duration ranges
-
-### Genre Popularity
-This analysis examines:
-- Which music genres have the highest average popularity scores
-- The distribution of genres in the dataset (top 10 genres)
-
-## Note
-
-The script is designed to be adaptive, as the column names in the dataset may vary. It will try to identify the most appropriate columns for the analyses based on keywords in the column names. 
+This analysis was created as part of a data science project exploring popular datasets from Kaggle. 
